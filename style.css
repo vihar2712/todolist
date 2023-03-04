@@ -1,0 +1,103 @@
+body {
+  overflow-y: scroll;
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  /* width: 90%; */
+  /* align-items: center; */
+}
+.todoContainer {
+  /* max-width: 80%; */
+  position: relative;
+  min-width: 15%;
+  /* max-width: 320px; */
+  display: flex;
+  margin: 15px;
+  padding: 1.8rem;
+  border: 2px solid black;
+  background-color: yellow;
+  border-radius: 12px;
+}
+.cross {
+  position: absolute;
+  right: 12px;
+  /* padding: 0.2rem; */
+  border-radius: 55%;
+  font-size: 25px;
+}
+.cross:hover {
+  background-color: #f44336;
+  cursor: pointer;
+  color: white;
+}
+#work,
+#addBtn {
+  padding: 0.5rem;
+  display: block;
+  /* width: 100%; */
+  margin: 8px auto;
+}
+#work {
+  border: 3px solid;
+  /* white-space: initial;
+    word-wrap: break-word; */
+}
+
+#addBtn {
+  border-radius: 12px;
+  cursor: pointer;
+}
+#addBtn:active {
+  font-size: small;
+}
+@media screen and (max-width: 425px) {
+  #work {
+    width: 250px;
+  }
+  #addBtn {
+    width: 100%;
+    /* display: block; */
+    /* margin: 5px; */
+  }
+}
+
+.notes {
+  font-size: 2.5rem;
+}
+.noNotes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.noteDetails {
+  /* overflow:hidden; */
+  white-space: normal;
+  font-size: 23px;
+  margin-right: 1.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+#updateBtn{
+    position: absolute;
+    top:35px;
+    right:23px;
+    margin:30px 30px;
+}
