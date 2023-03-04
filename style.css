@@ -1,5 +1,8 @@
 body {
   overflow-y: scroll;
+  white-space: normal;
+  font-family: "Bad Script", cursive;
+  font-family: "Cabin Sketch", cursive;
 }
 .todo {
   display: flex;
@@ -31,7 +34,7 @@ body {
 .cross {
   position: absolute;
   right: 12px;
-  /* padding: 0.2rem; */
+  padding: 0.2rem;
   border-radius: 55%;
   font-size: 25px;
 }
@@ -48,14 +51,17 @@ body {
   margin: 8px auto;
 }
 #work {
-  border: 3px solid;
+  border: 3px solid gray;
+  border-radius: 23px;
   /* white-space: initial;
     word-wrap: break-word; */
 }
 
 #addBtn {
   border-radius: 12px;
+  font-weight: bold;
   cursor: pointer;
+  border-color: gray;
 }
 #addBtn:active {
   font-size: small;
@@ -87,17 +93,21 @@ body {
 .noteDetails {
   /* overflow:hidden; */
   white-space: normal;
+  font-weight: bolder;
   font-size: 23px;
+  margin-left: 0.2rem;
   margin-right: 1.5rem;
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
 
-#updateBtn{
-    position: absolute;
-    top:35px;
-    right:23px;
-    margin:30px 30px;
+#updateBtn {
+  position: absolute;
+  bottom: 3px;
+  right: 35px;
+  /* margin:30px 30px; */
+  border-radius: 12px;
+  padding: 4px;
 }

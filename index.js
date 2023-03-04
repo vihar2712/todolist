@@ -79,8 +79,7 @@ function updateNotes(noteId) {
   let checkBox = document.getElementById(`checkBox${noteId}`);
   checkBox.classList.add("hide");
   let noteContainer = document.getElementById(`notes${noteId}`);
-
-  // console.log(noteContainer);
+  // console.log(noteContainer.textContent);
   // console.log(noteContainer.textContent.length);
   noteContainer.outerHTML = `<form action=""  id="notes${noteId}"><textarea id="${noteId}notes" cols="20" rows="${
     noteContainer.textContent.length / 20 + 1
@@ -111,6 +110,9 @@ function updateNotes(noteId) {
     // console.log(notes);
 
     let updatedNotes = notes.value;
+    if (updatedNotes === "") {
+      return false;
+    }
     // console.log(notes.value);
 
     currentNote[0].actualWork = updatedNotes;
@@ -127,4 +129,3 @@ function updateNotes(noteId) {
 
   // console.log(currentNote);
 }
-
