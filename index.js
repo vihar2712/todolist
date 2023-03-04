@@ -81,11 +81,11 @@ function updateNotes(noteId) {
   let noteContainer = document.getElementById(`notes${noteId}`);
   // console.log(noteContainer.textContent);
   // console.log(noteContainer.textContent.length);
-  noteContainer.outerHTML = `<form action=""  id="notes${noteId}"><textarea id="${noteId}notes" cols="20" rows="${
+  noteContainer.outerHTML = `<form action="" id="notes${noteId}"><textarea class="textArea" id="${noteId}notes" cols="20" rows="${
     noteContainer.textContent.length / 20 + 1
   }" class="noteDetails" >${
     noteContainer.textContent
-  }</textarea><input id="updateBtn" type="submit" value="Update"/></form>`;
+  }</textarea><input class="updateBtn" id="updateBtn${noteId}" type="submit" value="Update"/></form>`;
 
   // noteContainer.innerHTML = `<div>
   // <input type='checkbox' onclick='checkThrough(${noteId})'/>
@@ -101,7 +101,7 @@ function updateNotes(noteId) {
       return note;
     }
   });
-  let updateBtn = document.getElementById("updateBtn");
+  let updateBtn = document.getElementById(`updateBtn${noteId}`);
   // console.log(updateBtn);
   updateBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -128,4 +128,8 @@ function updateNotes(noteId) {
   // notes.removeAttribute("disabled");
 
   // console.log(currentNote);
+}
+
+function save(noteId) {
+  console.log(noteId);
 }

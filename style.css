@@ -92,6 +92,7 @@ body {
 
 .noteDetails {
   /* overflow:hidden; */
+  word-break: break-all;
   white-space: normal;
   font-weight: bolder;
   font-size: 23px;
@@ -103,11 +104,17 @@ body {
   display: none;
 }
 
-#updateBtn {
+.updateBtn {
   position: absolute;
   bottom: 3px;
   right: 35px;
   /* margin:30px 30px; */
   border-radius: 12px;
   padding: 4px;
+}
+
+
+.textArea{
+    border:2px solid gray;
+    border-radius: 6px;
 }
